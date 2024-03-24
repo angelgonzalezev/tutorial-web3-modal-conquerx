@@ -12,12 +12,16 @@ function App() {
   const { selectedNetworkId } = useWeb3ModalState();
 
   return (
-    <Box w={"100vw"} h={"100vh"} bgColor={"gray.700"} display={"flex"} justifyContent={"center"} alignItems={"center"}>
-      {/* <w3m-button />
-      <w3m-account-button />
-      <w3m-connect-button />
-      <w3m-network-button /> */}
-      <Button onClick={() => open()}>Connect</Button>
+    <Box w={"100vw"} h={"100vh"} bgColor={"gray.700"}>
+      {!isConnected ? (
+        <Flex w={"100vw"} h={"100vh"} alignItems={"center"} justifyContent={"center"}>
+          <w3m-button />
+        </Flex>
+      ) : (
+        <>
+          <HeaderComponent />
+        </>
+      )}
     </Box>
   );
 }
