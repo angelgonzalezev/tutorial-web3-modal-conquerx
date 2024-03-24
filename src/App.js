@@ -39,6 +39,9 @@ function App() {
             </Text>
           </Flex>
           <SendTransactionComponent />
+          <Flex gap={4}>
+            <SignMessageComponent />
+          </Flex>
         </>
       )}
     </Box>
