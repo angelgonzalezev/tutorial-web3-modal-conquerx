@@ -20,6 +20,25 @@ function App() {
       ) : (
         <>
           <HeaderComponent />
+          <Flex gap={4} p={4}>
+            <Text color={"white"} fontSize={"xl"}>
+              Address: {address}
+            </Text>
+            {balance && (
+              <>
+                <Text color={"white"} fontSize={"xl"}>
+                  Balance: {balance.formatted}
+                </Text>
+                <Text color={"white"} fontSize={"xl"}>
+                  Symbol: {balance.symbol}
+                </Text>
+              </>
+            )}
+            <Text color={"white"} fontSize={"xl"}>
+              Chain Id: {selectedNetworkId}
+            </Text>
+          </Flex>
+          <SendTransactionComponent />
         </>
       )}
     </Box>
