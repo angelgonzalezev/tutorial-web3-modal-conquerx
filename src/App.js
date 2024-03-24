@@ -41,6 +41,7 @@ function App() {
           <SendTransactionComponent />
           <Flex gap={4}>
             <SignMessageComponent />
+            <VerifyMessageComponent />
           </Flex>
         </>
       )}
